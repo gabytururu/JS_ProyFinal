@@ -37,9 +37,6 @@ confirmarRegistro.addEventListener("click", () =>{
 
     contenedorRegistro.classList.toggle('registro-active')
 
-
-
-
     Swal.fire({
         title: '<strong><u>Registro Exitoso</u></strong>',
         icon: 'success',

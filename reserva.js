@@ -125,6 +125,7 @@ const contadorReservas = document.getElementById("cantidadReservas")
 
 const precioTotal = document.getElementById ("total")
 
+
 // Filtrado de Categorías de Actividades 
 
 const filtrarActividades = document.getElementById("filtrarActividades")
@@ -147,4 +148,24 @@ const filtrarPorActividad = () => {
         filtrarPorActividad ()
 })
 
-//==========================================================================
+// Confirmar Reservas
+
+const botonConfirmarRes = document.getElementById("confirmar-reservas")
+
+botonConfirmarRes.addEventListener("click" , () => {
+
+   if (reservasAcumuladas.length === 0) {
+
+    Swal.fire({
+        icon: 'error',
+        title: 'Ay no! Ocurrió un Error...',
+        text: 'No has agregado ninguna actividad. Por ello no es posible confirmar tus reservaciones.',
+        
+      })
+
+   }else {
+       alert ("excelente seguimosel proceso precio total" + precioTotal.innerText)
+    //    console.log(precioTotal.innerText)
+   }
+
+})
