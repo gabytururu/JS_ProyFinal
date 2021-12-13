@@ -9,6 +9,22 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+.header {
+    position: sticky
+
+}
+
+
+.titulo {
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(172, 252, 248);
+    border: black
+    
+}
+
 img {
     width: 100%;
     margin-bottom: 10px;
@@ -18,14 +34,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    /* box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, .3); */
+    padding: 20px 15%;   
     margin-bottom: 0px;
-    background-color: rgb(0, 119, 113)
+    background-color: rgb(20, 143, 137)
 }
 
 .frontPageBanner {
-    height: 65vh;
+    height: 69vh;
     background-image: url("../imagenes/portada.jpg");
     background-size: cover;
     background-attachment: fixed; 
@@ -37,7 +52,7 @@ header {
     flex-direction: column;
     justify-content:center;
     text-align:center;
-    height:500px;
+    height:350px;
     font-size: 20px; 
 }
 
@@ -59,25 +74,17 @@ header {
     font-size: 250%;
 }
 
-/* .bannerContent__Marca:hover {
-        font-size:100%
-} */
-
-
-h1 {
-    color: royalblue;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 50px;
-    
+.boton-elegir {
+    background-color: rgb(36, 205, 196);
 }
+
 
 /* ========================= Carrito de Reservaciones Actividades ======================== */
 
 /* ------------ Boton del Carrito ------------- */
 #boton-carrito {
     border: none;
-    color: royalblue;
+    color: rgb(20, 143, 137);
     font-size: 40px;
     background-color: white;
     border-radius: 50%;
@@ -87,7 +94,7 @@ h1 {
 #boton-carrito:hover {
     cursor: pointer;
     color: white;
-    background-color: royalblue;
+    background-color: rgb(36, 205, 196);;
 }
 #boton-carrito:focus {
     outline: none;
@@ -95,8 +102,11 @@ h1 {
 
 /* ---------------- Contenedor de ReservasActividades ------------- */
 
+
+
+
 #contenedor-productos {
-    max-width: 1500px;
+    max-width: 100px;
     margin: 60px auto;
     display: flex;
     justify-content: space-between;
@@ -106,23 +116,34 @@ h1 {
 p {
     line-height: 1.8;
 }
+
 .producto {
     max-width: 30%;
     padding: 10px;
     margin: 1opx;
-    margin-bottom: 20px;
-    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;    
+    
 }
+
+
 .precioProducto {
     font-weight: 700;
+    
 }
+
+.rating {
+    color:rgb(36, 205, 196);
+    border:cadetblue
+}
+
+
 .boton-agregar {
-    background-color: royalblue;
+    background-color: rgb(20, 143, 137);
     color: white;
     font-size: 18px;
     font-weight: 700;
-    padding: 5px;
-    border: none;
+    padding: 9px; 
+    border-radius: 8px;
 }
 .boton-agregar:hover {
     cursor: pointer;
@@ -131,7 +152,17 @@ p {
     outline: none;
 }
 
+.boton-reservar {
+    background-color: rgb(20, 143, 137);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 9px; 
+    border-radius: 8px;
+}
+
 .modal-contenedor {
+   z-index: 9999;
     position: fixed;   
     top: 0;
     width: 100%;
@@ -164,15 +195,16 @@ p {
 }
 
 .modal-carrito h3 {
-    color: royalblue;
-    padding-bottom: 5px;
+    color: rgb(20, 143, 137);
+    padding-bottom: 15px;
+    font-weight: 800;
 }
 .modal-carrito #carritoCerrar {
     position: absolute;
     top: 15px;
     right: 15px;
     font-size: 20px;
-    color: royalblue;
+    color: rgb(20, 143, 137);
     border: none;
     background-color: white;
 }
@@ -197,21 +229,25 @@ p {
     justify-content: space-between;
 }
 .productoEnCarrito:hover {
-    border-left: 5px solid royalblue;
+    border-left: 5px solid rgb(20, 143, 137);
 }
 
 .boton-eliminar {
     background-color: white;
     color: red;
     border: none;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .boton-eliminar:hover {
     cursor: pointer;
 }
-.boton-eliminar:focus {
+/* .boton-eliminar:focus {
     outline: none;
+} */
+
+#filtrarActividades {
+    background-color: rgb(20, 143, 137);
 }
 
 
@@ -250,15 +286,16 @@ p {
 }
 
 .modal-newsletter h3 {
-    color: royalblue;
+    color: rgb(20, 143, 137);
     padding-bottom: 5px;
+    text-align: center;
 }
 .modal-newsletter #cerrarRegistro {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 20px;
-    color: royalblue;
+    font-size: 18px;
+    color: rgb(20, 143, 137);
     border: none;
     background-color: white;
 }
@@ -273,8 +310,9 @@ p {
     
 }
 
+
 .boton-registrarme {
-    background-color: rgb(73, 225, 65);
+    background-color: rgb(20, 143, 137);
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -310,7 +348,7 @@ p {
     position: relative;
     background-color: white;
     min-width: 850px;
-    min-height: 550px;
+    min-height: 480px;
     padding: 50px;
     margin-top: -100%;
     border-radius: 15px;   
@@ -321,15 +359,17 @@ p {
 }
 
 .modal-inputDatos h3 {
-    color: royalblue;
-    padding-bottom: 5px;
+    color: rgb(20, 143, 137);
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
 }
 .modal-inputDatos #cerrarVentana {
     position: absolute;
     top: 15px;
     right: 15px;
     font-size: 20px;
-    color: royalblue;
+    color: rgb(20, 143, 137);
     border: none;
     background-color: white;
 }

@@ -57,10 +57,10 @@ const cargarActividades = (arrayActividades) => {
         ofertaActividad.innerHTML =`
                 <div class="card-header">${actividad.nombre}</div>
                     <img src=${actividad.img}>
-                    <div class="card-body text-primary">            
+                    <div class="card-body">            
                     <p class="card-text">${actividad.desc}</p>
                     <p class="card-text"><strong>Precio:</strong> $${actividad.precio}</p>
-                    <button id="reservarActividad(${actividad.id})" class="btn btn-primary">Reservar</button>
+                    <button id="reservarActividad(${actividad.id})" class="boton-reservar">Reservar</button>
                     <div class="rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -123,9 +123,10 @@ const reservacionesAcumuladas = () => {
         const div = document.createElement ("div")
         div.className = "reservaAgregada"
         div.innerHTML =`
-                    <p>"Actividad Reservada: ${res.nombre}"</p>
-                    <p>"<strong>Precio:</strong>${res.precio}"</p>
-                    <button onclick="eliminarReservacion(${res.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                    <p><strong>Actividad: </strong>${res.nombre}</p>
+                    <p><strong>Precio: </strong>USD$${res.precio}"</p>                   
+                    <p> ¿Desea Eliminar esta reservación? -----><button onclick="eliminarReservacion(${res.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>                  
+                    <p> -------------------------------------------</p>
                     `
         contenedorReservasAcum.appendChild(div)
 
