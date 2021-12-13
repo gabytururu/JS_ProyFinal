@@ -8,6 +8,34 @@ botonVolverInicio.addEventListener("click", () => {
 
 })
 
+
+
+// ================= MODAL CARRITO =================================//
+
+// const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
+// const botonAbrir = document.getElementById('boton-carrito')
+// const botonCerrar = document.getElementById('carritoCerrar')
+// const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
+
+
+// botonAbrir.addEventListener('click', ()=>{
+//     contenedorModal.classList.toggle('modal-active')
+// })
+// botonCerrar.addEventListener('click', ()=>{
+//     contenedorModal.classList.toggle('modal-active')
+// })
+
+// contenedorModal.addEventListener('click', () => {
+//     botonCerrar.click()
+// })
+
+// modalCarrito.addEventListener('click', (event) => {
+//     event.stopPropagation()
+// })
+
+
+
+
 //=================================Creación del Sitio - Oferta Actividades =================================//
 
 const contenedorActividades = document.getElementById("contenedor-ofertasReserva")
@@ -150,22 +178,39 @@ const filtrarPorActividad = () => {
 
 // Confirmar Reservas
 
-const botonConfirmarRes = document.getElementById("confirmar-reservas")
+        const modalAceptarReserva = document.getElementsByClassName("modal-aceptarReserva")[0]                   
+        const botonConfirmarRes = document.getElementById("confirmar-reservas")        
+        const botonCerrarVentana = document.getElementById("cerrarVentana")
+        const modalInputDatos = document.getElementsByClassName("modal-inputDatos")[0]
+        const botonCompletarReg = document.getElementById("completar-registro")
 
-botonConfirmarRes.addEventListener("click" , () => {
+        botonConfirmarRes.addEventListener("click" , () => {  
 
-   if (reservasAcumuladas.length === 0) {
+            if (reservasAcumuladas.length === 0) {
 
-    Swal.fire({
-        icon: 'error',
-        title: 'Ay no! Ocurrió un Error...',
-        text: 'No has agregado ninguna actividad. Por ello no es posible confirmar tus reservaciones.',
+                    Swal.fire({
+                            icon: 'error',
+                            title: 'Ay no! Ocurrió un Error...',
+                            text: 'No has agregado ninguna actividad. Por ello no es posible confirmar tus reservaciones.',       
+                    })
+
+            } else {
+            
+                contenedorModal.classList.toggle('modal-active')                
+                modalAceptarReserva.classList.toggle("aceptarReserva-active")                  
+                
+    
+                botonCerrarVentana.addEventListener ("click", () => {
+                modalAceptarReserva.classList.toggle("aceptarReserva-active")
+                })
+
+                botonCompletarReg.addEventListener("click", () => {
+                    console.log("yaaaaaaas")
+                })
+
+            }
         
-      })
+        })
+                 
 
-   }else {
-       alert ("excelente seguimosel proceso precio total" + precioTotal.innerText)
-    //    console.log(precioTotal.innerText)
-   }
-
-})
+       
