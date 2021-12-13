@@ -40,7 +40,10 @@ botonVolverInicio.addEventListener("click", () => {
 
 const contenedorActividades = document.getElementById("contenedor-ofertasReserva")
 
-
+window.addEventListener("load", () => {
+    cargarActividades(reservaActividades)
+})
+    
 const cargarActividades = (arrayActividades) => {
 
     contenedorActividades.innerHTML = ""
@@ -184,6 +187,26 @@ const filtrarPorActividad = () => {
         const modalInputDatos = document.getElementsByClassName("modal-inputDatos")[0]
         const botonCompletarReg = document.getElementById("completar-registro")
 
+        
+        botonCerrarVentana.addEventListener ("click", () => {
+            modalAceptarReserva.classList.toggle("aceptarReserva-active")
+            })
+        
+        botonCompletarReg.addEventListener("click", () => {
+                    
+                    
+                modalAceptarReserva.classList.toggle("aceptarReserva-active") 
+             
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Reservaciones Confirmadas con Éxito',
+                    html: '¡Maravilloso! Tu reservación ha sido confirmada. <br><br> Enviaremos la información a tu correo electrónico, junto con el voucher de pago <br><br><br><strong>¡Gracias por tu Preferencia</strong>' ,
+                    showConfirmButton: false,
+                    timer: 3500
+                  })
+            })
+        
         botonConfirmarRes.addEventListener("click" , () => {  
            
                       
@@ -199,32 +222,12 @@ const filtrarPorActividad = () => {
             } else {
             
                 contenedorModal.classList.toggle('modal-active')                
-                modalAceptarReserva.classList.toggle("aceptarReserva-active")                                
-                
-    
-                botonCerrarVentana.addEventListener ("click", () => {
-                modalAceptarReserva.classList.toggle("aceptarReserva-active")
-                })
-
-                modalInputDatos.addEventListener("click", (event) => {
-                    event.stopPropagation()
-                })  
-
-                botonCompletarReg.addEventListener("click", () => {
-                    
-                    modalAceptarReserva.classList.toggle("aceptarReserva-active") 
-                 
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Reservaciones Confirmadas con Éxito',
-                        html: '¡Maravilloso! Tu reservación ha sido confirmada. <br><br> Enviaremos la información a tu correo electrónico, junto con el voucher de pago <br><br><br><strong>¡Gracias por tu Preferencia</strong>' ,
-                        showConfirmButton: false,
-                        timer: 3500
-                      })
-                })
-
-                            
+                modalAceptarReserva.classList.toggle("aceptarReserva-active")                            
+                     
+                // modalInputDatos.addEventListener("click", (event) => {
+                //     event.stopPropagation()
+                // })  
+              
                 
             }
         
