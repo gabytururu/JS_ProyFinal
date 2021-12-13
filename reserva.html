@@ -18,42 +18,42 @@
     <header>
         <h1 id="titulo" class="titulo">Reserva tu Salida</h1>
         <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="cantidadReservas">0</span></button>
+        <button id="volver-inicio" class="boton-agregar">Volver al Inicio</button>
     </header>
 
-    <button id="newsletter">SUSCRIBIRME</button>
+    
+
+    <!-- Filtrado de actividades  -->
 
     <div class="container">
-        <select id="filtrarActividades">
-            <option value="all">Todas las Actividades</option>
-            <option value="Es">Escalada en Roca</option>
-            <option value="Bi">Tour de Bicicleta</option>
-            <option value="Se">Track de Senderismo</option>
+        <select id="filtrarActividades" class="form-select mt-5 bg-primary" >
+            <option value="all" class= "fs-3">Todas las Actividades</option>
+            <option value="Es" class= "fs-3">Escalada en Roca</option>
+            <option value="Bi" class= "fs-3">Tour de Bicicleta</option>
+            <option value="Se" class= "fs-3">Track de Senderismo</option>
         </select>
     </div>
 
+<!-- Lista de oferta de actividades  -->
     <section class="container">
         <div class="row" id="contenedor-ofertasReserva">
   
         </div>
     </section>
+
+    
+<!-- Modal controlador de reservaciones de actividades -->
   
-    <!-- <main id="contenedor-productos"> este es el mismo que el de arriba pero hecho con otro metodo pq es otra clase
-
-    </main> -->
-
     <div class="modal-contenedor">
         <div class="modal-carrito">
             <h3>Carrito</h3>
             <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
             <div id="carrito-contenedor">
-                <!-- <div class="productoEnCarrito">
-                    <p>Buzo 1</p>
-                    <p>Precio: $1200</p>
-                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                </div> -->
+               
             </div>
             <p class="precioReserva">Total Acumulado: $<span id="total">0</span></p>
             <button id="vaciar-reservas" class="boton-agregar">Vaciar carrito</button>
+            <button id="confirmar-reservas" class="boton-agregar">Confirmar Reservaciones</button>
         </div>
     </div>
 

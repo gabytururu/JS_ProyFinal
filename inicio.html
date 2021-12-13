@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumbo Naturaleza - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reserva.css">
+    <script defer src="./newsletter.js"></script>
+    <script defer src="./reservaOpciones.js"></script>    
+    <script defer src="./reserva.js"></script>
+</head>
+
+<header>
+    <h1 id="titulo" class="titulo">Bienvenid@</h1>
+</header>
+
+      
+    <div class="container">
+        <h1>Bienvenid@ qué deseas hacer hoy?</h1>
+        <div class="row gx-5">
+            <div class= col>
+                <button id="newsletter" class="boton-agregar p-3 mr">SUSCRIBIRME</button>
+                <button id="generarReserva" class="boton-agregar p-3" type="submit">RESERVAR SALIDA</button>
+            </div>
+        </div>
+    </div>
+
+
+
+     <!-- suscripcion a news letter -->
+    <div class="modal-registro">
+        <div class="modal-newsletter">
+            <h3>Gracias por tu Interés en Registrarte</h3>
+            <button id="cerrarRegistro"><i class="fas fa-times-circle"></i></button>
+            <div id="registro-contenedor">
+               <form id="formato-registro">
+                    
+                    <div class="form-floating mt-4">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="inserte su nombre">
+                    <label for="floatingInput">Nombre</label>
+                    </div>
+
+                    <div class="form-floating mt-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Edad</label>
+                    </div>
+                    
+                    <div class="form-floating mt-3">
+                        <input type="email" class="form-control" id="floatingInputValue" placeholder="nombre@example.com" value="nombre@meemail.com">
+                        <label for="floatingInputValue">Inserta tu e-mail</label>
+                    </div>
+                   
+                    <select class="form-select mt-3" aria-label="Default select example">
+                        <option selected>¿En qué actividad estás interesad@?</option>
+                        <option value="1">Escalada en Roca</option>
+                        <option value="2">Bicicleta de Montaña</option>
+                        <option value="3">Senderismo</option>
+                    </select>
+                
+                   
+               </form>
+            </div>
+            <button id="completar-registro" class="boton-registrarme" type="submit">Registrarme</button>
+            </div>        
+    </div>
+
+
+
+
+<body>

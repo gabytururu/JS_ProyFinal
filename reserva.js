@@ -1,3 +1,13 @@
+// ================= Navegación =====================//
+
+const botonVolverInicio = document.getElementById("volver-inicio")
+
+botonVolverInicio.addEventListener("click", () => {
+
+    location.href = "inicio.html"
+
+})
+
 //=================================Creación del Sitio - Oferta Actividades =================================//
 
 const contenedorActividades = document.getElementById("contenedor-ofertasReserva")
@@ -39,6 +49,8 @@ const cargarActividades = (arrayActividades) => {
 })
 
 }
+
+
 
 //=================================Controlador de Reservaciones =================================//
 
@@ -136,5 +148,3 @@ const filtrarPorActividad = () => {
 })
 
 //==========================================================================
-
-
