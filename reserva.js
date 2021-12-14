@@ -188,25 +188,43 @@ const filtrarPorActividad = () => {
         const modalInputDatos = document.getElementsByClassName("modal-inputDatos")[0]
         const botonCompletarReg = document.getElementById("completar-registro")
 
+        const nombreInputReserva = document.getElementById("nombre-input")
+        const emailInputReserva = document.getElementById("email-input")
+
+
         
         botonCerrarVentana.addEventListener ("click", () => {
             modalAceptarReserva.classList.toggle("aceptarReserva-active")
             })
+
         
+
         botonCompletarReg.addEventListener("click", () => {
-                    
-                    
-                modalAceptarReserva.classList.toggle("aceptarReserva-active") 
+                   
+                if ( nombreInputReserva.value.length < 1 || emailInputReserva.value.length < 1 ) {
+
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ay no! Ocurrió un Error...',
+                            text: 'Por favor vuelve a intentarlo - Asegrúrate de llenar todas las casillas y de insertar solo números enteros para tu edad.', 
+                                                        
+                        })           
+                 
+                } else {
+                        modalAceptarReserva.classList.toggle("aceptarReserva-active") 
              
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Reservaciones Confirmadas con Éxito',
-                    html: '¡Maravilloso! Tu reservación ha sido confirmada. <br><br> Enviaremos la información a tu correo electrónico, junto con el voucher de pago <br><br><br><strong>¡Gracias por tu Preferencia</strong>' ,
-                    showConfirmButton: false,
-                    timer: 3500
-                  })
-            })
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Reservaciones Confirmadas con Éxito',
+                            html: '¡Maravilloso! Tu reservación ha sido confirmada. <br><br> Enviaremos la información a tu correo electrónico, junto con el voucher de pago <br><br><br><strong>¡Gracias por tu Preferencia</strong>' ,
+                            showConfirmButton: false,
+                            timer: 3500
+                        })
+                }
+
+        })
+
         
         botonConfirmarRes.addEventListener("click" , () => {  
            
@@ -223,13 +241,7 @@ const filtrarPorActividad = () => {
             } else {
             
                 contenedorModal.classList.toggle('modal-active')                
-                modalAceptarReserva.classList.toggle("aceptarReserva-active")                            
-                     
-                // modalInputDatos.addEventListener("click", (event) => {
-                //     event.stopPropagation()
-                // })  
-              
-                
+                modalAceptarReserva.classList.toggle("aceptarReserva-active")                               
             }
         
         })
