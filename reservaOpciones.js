@@ -2,7 +2,7 @@
 let reservaActividades =[
     
     {id:1, nombre:"Escalada - Los Dínamos CDMX", desc: "Escalada deportiva en roca para intermedios y avzanados en el área natural los dínamos, CDMX.", tipo:"Es", precio:150, img:"./imagenes/ES_LosDinamosCDMX.jpg"},
-    {id:2, nombre:"BiciTour - Tepoztlán Morelos", desc: "BiciTour en Tepoztlán Morelos para todas las edades, opción de ruta y de montaña.", tipo:"Bi", precio:95, img:"./imagenes/tepoz.jpg"},
+    {id:2, nombre:"BiciTour - Tepoztlán Morelos", desc: "BiciTour en Tepoztlán Morelos para todas las edades, opción de ruta y de montaña en cualquier nivel que estés.", tipo:"Bi", precio:95, img:"./imagenes/tepoz.jpg"},
     {id:3, nombre:"Escalada - Peñoles Chihuahua", desc: "Escalada en bloque en el desierto de Peñoles en Chihuahua, actividad para todos los niveles.", tipo:"Es", precio:250, img:"./imagenes/peñoles.jpeg"},
     {id:4, nombre:"Senderismo - Pico de Orizaba Puebla", desc: "Conoce la Montaña más alta de México y camina por sus senderos, nivel principiante e intermedios.", precio:300, img:"./imagenes/picoOrizaba.jpg"},
     {id:5, nombre:"Senderismo - Huasteca Potosina S.L.P", desc: "Conoce y senderea por los cañones de la reserva natural más pristina de México, todos los niveles.", tipo:"Se", precio:65, img:"./imagenes/Huasteca800by600.jpg"},

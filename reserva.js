@@ -4,7 +4,7 @@ const botonVolverInicio = document.getElementById("volver-inicio")
 
 botonVolverInicio.addEventListener("click", () => {
 
-    location.href = "inicio.html"
+    location.href = "inicioNewsletter.html"
 
 })
 
