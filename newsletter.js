@@ -31,18 +31,38 @@ botonCerrarRegistro.addEventListener('click', ()=>{
 
 //================CONFIRMAR REGISTRO ============================//
 
+
 const confirmarRegistro = document.getElementById("completar-registro")
 
 confirmarRegistro.addEventListener("click", () =>{
 
+    let nombre = document.getElementById("input-nombre")
+    let edad = document.getElementById ("input-edad")
+    let email = document.getElementById ("input-email")
+
+    let nombreInput = nombre.value
+    let edadInput = edad.value
+    let emailIput = email.value
+
+
+    if ( nombreInput.length < 1 || edadInput.length < 1 || emailIput.length < 1) {
+
+       alert("ay no")
+    
+      }else {
+
     contenedorRegistro.classList.toggle('registro-active')
+
+    let actividadesDeInteres = document.getElementById("actividad")
+
+    let actividadElegida = actividadesDeInteres.value      
 
     Swal.fire({
         title: '<strong><u>Registro Exitoso</u></strong>',
         icon: 'success',
         html:
-          '¡En hora buena! Ya eres parte de la lista de receptores de nuestro news letter. ' + 'A inicios del mes siguiente empezarás a recibir toda la información reelevante sobre el mundo del Outdoors en México.  ' +
-          '<br><br><h3><strong>¡Gracias por Confiar en Nosotr@s!</strong></h3> ' ,
+          '¡En hora buena ' + nombre.value +'!. Tu registro al Newsletter ha sido completado correctamente. ' + 'A partir del mes siguiente empezarás a recibir toda la información reelevante sobre ' + actividadElegida + '  en México.  ' +
+          '<br><br><h3><strong>¡Gracias por Confiar en Nosotr@s!</strong></h3>' ,
         showCloseButton: true,        
         focusConfirm: false,
         confirmButtonText:
@@ -51,8 +71,14 @@ confirmarRegistro.addEventListener("click", () =>{
         
       })
 
+    }
+
     
 })
+
+
+
+
 
 
 

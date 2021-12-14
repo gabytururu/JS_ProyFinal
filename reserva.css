@@ -248,6 +248,7 @@ p {
 
 #filtrarActividades {
     background-color: rgb(20, 143, 137);
+    color: white
 }
 
 
@@ -299,15 +300,12 @@ p {
     border: none;
     background-color: white;
 }
+
 .modal-newsletter #cerrarRegistro:hover {
     cursor: pointer;
 }
 .modal-newsletter #cerrarRegistro:focus {
     outline: none;
-}
-.modal-newsletter .precioProducto {
-    padding-top: 10px;
-    
 }
 
 
@@ -323,6 +321,12 @@ p {
     margin-left: 300px;
 }
 
+.pregunta-select {
+    margin-top: 12px;
+    margin-left: 5px;
+
+
+}
 
 /* ========================= Confirmación de Reservas ======================== */
 .modal-aceptarReserva {

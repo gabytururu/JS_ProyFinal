@@ -13,7 +13,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="./newsletter.js"></script>
     <script defer src="./reservaOpciones.js"></script>    
-    <script defer src="./reserva.js"></script>
+    
 </head>
 
 <header>
@@ -49,26 +49,29 @@
                <form id="formato-registro">
                     
                     <div class="form-floating mt-4">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="inserte su nombre">
+                    <input type="text" class="form-control" id="input-nombre" placeholder="Inserta tu nombre">
                     <label for="floatingInput">Nombre</label>
                     </div>
 
                     <div class="form-floating mt-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="number" class="form-control" id="input-edad" placeholder="Inserta tu edad en años">
                         <label for="floatingPassword">Edad</label>
                     </div>
                     
                     <div class="form-floating mt-3">
-                        <input type="email" class="form-control" id="floatingInputValue" placeholder="nombre@example.com" value="nombre@meemail.com">
+                        <input type="email" class="form-control" id="input-email" placeholder="nombre@ejemplo.com">
                         <label for="floatingInputValue">Inserta tu e-mail</label>
                     </div>
                    
-                    <select class="form-select mt-3" aria-label="Default select example">
-                        <option selected>¿En qué actividad estás interesad@?</option>
-                        <option value="1">Escalada en Roca</option>
-                        <option value="2">Bicicleta de Montaña</option>
-                        <option value="3">Senderismo</option>
-                    </select>                                  
+                    <div>
+                    <p class="pregunta-select">¿En qué actividad estás interesad@?</p>
+                    <select id="actividad" class="form-select mt-3" aria-label="Default select example">
+                        <option value="Escalada en Roca ">Escalada en Roca</option>
+                        <option value="Bici de Montaña ">Bicicleta de Montaña</option>
+                        <option value="Senderismo ">Senderismo</option>
+                        <option value="Todas las actividades contempladas">Todas las actividades</option>
+                    </select>
+                    </div>                                  
                </form>
             </div>
             <button id="completar-registro" class="boton-registrarme" type="submit">Registrarme</button>
