@@ -92,10 +92,10 @@ let reservasAcumuladas = []
 const agregarReservacion = (actId) => {
     const reserva = reservaActividades.find( (act) => act.id === actId)
     reservasAcumuladas.push(reserva)
-    console.log(reservasAcumuladas)
+    
 
     reservacionesAcumuladas()
-    console.log(reservasAcumuladas)
+    
 }
 
 
@@ -107,7 +107,7 @@ const eliminarReservacion = (actId) => {
     reservasAcumuladas.splice(indice,1)
 
     reservacionesAcumuladas()
-    console.log(reservasAcumuladas)
+    
 
 }
 
@@ -134,7 +134,7 @@ const reservacionesAcumuladas = () => {
 
     contadorReservas.innerText = reservasAcumuladas.length
     precioTotal.innerText = reservasAcumuladas.reduce((acc, res) => acc + res.precio, 0)
-    console.log(precioTotal.innerText)
+    
 }
 
 // Vaciado de Reservaciones 
