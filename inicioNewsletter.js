@@ -54,7 +54,7 @@ confirmarRegistro.addEventListener ("click", () => {
             Swal.fire({
                   icon: 'error',
                   title: 'Ay no! Ocurrió un Error...',
-                  text: 'Por favor vuelve a intentarlo - Asegrúrate de llenar todas las casillas y de insertar solo números enteros para tu edad.', 
+                  text: 'Por favor vuelve a intentarlo - Asegrúrate de llenar todas las casillas y de insertar sólo números enteros para tu edad.', 
                   
                         
             })               

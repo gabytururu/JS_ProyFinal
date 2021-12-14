@@ -206,7 +206,7 @@ const filtrarPorActividad = () => {
                         Swal.fire({
                             icon: 'error',
                             title: 'Ay no! Ocurrió un Error...',
-                            text: 'Por favor vuelve a intentarlo - Asegrúrate de llenar todas las casillas y de insertar solo números enteros para tu edad.', 
+                            html: 'Es importante llenar todos los campos, de lo contrario no es posible concluir la reservación.<br><br>Por favor vuelve a intentarlo', 
                                                         
                         })           
                  
@@ -217,10 +217,12 @@ const filtrarPorActividad = () => {
                             position: 'top-end',
                             icon: 'success',
                             title: 'Reservaciones Confirmadas con Éxito',
-                            html: '¡Maravilloso! Tu reservación ha sido confirmada. <br><br> Enviaremos la información a tu correo electrónico, junto con el voucher de pago <br><br><br><strong>¡Gracias por tu Preferencia</strong>' ,
+                            html: '¡Maravilloso! Gracias por tu reservación ' + nombreInputReserva.value + '<br><br> Enviaremos la información junto con el voucher de pago al correo electrónico ' + emailInputReserva.value + '<br><br><br><strong>¡Gracias por tu Preferencia</strong>' ,
                             showConfirmButton: false,
                             timer: 3500
                         })
+
+                        document.getElementById("formato-registro").reset()
                 }
 
         })
