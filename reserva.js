@@ -1,4 +1,4 @@
-// ================= Navegación =====================//
+// =========================== NAVEGACION ==============================//
 
 const botonVolverInicio = document.getElementById("volver-inicio")
 
@@ -10,7 +10,7 @@ botonVolverInicio.addEventListener("click", () => {
 
 
 
-// ================= MODAL CARRITO =================================//
+// ======================= MODAL CARRITO ==============================//
 
 const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
 const botonAbrir = document.getElementById('boton-carrito')
@@ -34,9 +34,8 @@ modalCarrito.addEventListener('click', (event) => {
 })
 
 
+//========== CARGA DE OFERTA ACTIVIDADES (REF: RESERVAOPCIONES.JS) =========//
 
-
-//=================================Creación del Sitio - Oferta Actividades =================================//
 
 const contenedorActividades = document.getElementById("contenedor-ofertasReserva")
 
@@ -82,8 +81,8 @@ const cargarActividades = (arrayActividades) => {
 }
 
 
+//======================  CONTROL DE RESERVACIONES ======================//
 
-//=================================Controlador de Reservaciones =================================//
 
 // Agregar Reservación
 
@@ -147,13 +146,13 @@ botonVaciar.addEventListener("click" , () => {
 })
 
 
-// modificación de Cantidad de reservaciones acumuladas
+// Modificación de Cantidad de reservaciones acumuladas
 
 const contadorReservas = document.getElementById("cantidadReservas")
 
 
 
-// modificación de Total Acumulado $ por reservaciones acumuladas
+// Modificación de Total Acumulado $ por reservaciones acumuladas
 
 const precioTotal = document.getElementById ("total")
 
@@ -180,7 +179,9 @@ const filtrarPorActividad = () => {
         filtrarPorActividad ()
 })
 
-// Confirmar Reservas
+
+//======================  CONFIRMAR RESERVACIONES ======================//
+
 
         const modalAceptarReserva = document.getElementsByClassName("modal-aceptarReserva")[0]                   
         const botonConfirmarRes = document.getElementById("confirmar-reservas")        

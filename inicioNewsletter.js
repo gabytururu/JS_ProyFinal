@@ -1,5 +1,5 @@
 
-// ================= Navegación =====================//
+// =========================== NAVEGACION ============================//
 
 const botonPagReservas = document.getElementById("generarReserva")
 
@@ -9,7 +9,7 @@ botonPagReservas.addEventListener("click", () => {
 
 })
 
-// ================= MODAL NEWSLETTER ==============================//
+// ======================= MODAL NEWSLETTER =========================//
 
 const contenedorRegistro = document.getElementsByClassName('modal-registro')[0]
 
@@ -31,7 +31,7 @@ botonCerrarRegistro.addEventListener('click', ()=>{
 
 
 
-//================CONFIRMAR REGISTRO NEWSLETTER ============================//
+//================= CONFIRMAR REGISTRO NEWSLETTER =====================//
 
 
 const confirmarRegistro = document.getElementById("completar-registro")
