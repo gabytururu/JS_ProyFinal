@@ -55,7 +55,7 @@ confirmarRegistro.addEventListener ("click", () => {
                   icon: 'error',
                   title: 'Ay no! Ocurrió un Error...',
                   text: 'Por favor vuelve a intentarlo - Asegrúrate de llenar todas las casillas y de insertar solo números enteros para tu edad.', 
-                  timer: 3500
+                  
                         
             })               
         
@@ -68,7 +68,7 @@ confirmarRegistro.addEventListener ("click", () => {
                 title: '<strong><u>Registro Exitoso</u></strong>',
                 icon: 'success',
                 html:
-                  '¡En hora buena ' + inputNombre.value +'!. Tu registro al Newsletter ha sido completado correctamente. ' + 'A partir del mes siguiente empezarás a recibir toda la información reelevante sobre ' + actividad.value + '  en México.  ' +
+                  '¡En hora buena ' + inputNombre.value +'!. Tu registro al Newsletter ha sido completado correctamente. ' + '<br><br>A partir del mes siguiente empezarás a recibir toda la información reelevante sobre ' + '<strong>' +actividad.value + '</strong>  en México.  ' +
                   '<br><br><h3><strong>¡Gracias por Confiar en Nosotr@s!</strong></h3>' ,
                 showCloseButton: true,        
                 focusConfirm: false,
